@@ -6,7 +6,6 @@ export default {
             main: "wss://cocreatejs.com",
             dev: "wss://dev.cocreatejs.com",
             test: "wss://test.cocreatejs.com",
-            "account-shell": "wss://dev.cocreatejs.com"
         }
     },
     directories: [
