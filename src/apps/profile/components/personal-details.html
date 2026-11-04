@@ -1,0 +1,277 @@
+<div
+	class="tab-pane active"
+	id="personalDetails"
+	role="tabpanel"
+	aria-labelledby="personalDetails-tab">
+	<div class="app-fields d-flex flex-wrap gap-3">
+		<div class="app-field app-field-half">
+			<label
+				for="first_nameInput"
+				class="form-label"
+				>First Name</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="first_nameInput"
+				placeholder="Enter your first_name"
+				key="first_name"
+				aria-label="First Name"
+				autocomplete="given-name" />
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="last_nameInput"
+				class="form-label"
+				>Last Name</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="last_nameInput"
+				placeholder="Enter your last_name"
+				key="last_name"
+				aria-label="Last Name"
+				autocomplete="family-name" />
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="phonenumberInput"
+				class="form-label"
+				>Phone Number</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="phonenumberInput"
+				placeholder="Enter your phone number"
+				key="phone_number"
+				aria-label="Phone Number"
+				autocomplete="tel" />
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="emailInput"
+				class="form-label"
+				>Email Address</label
+			>
+			<input
+				type="email"
+				class="form-control"
+				id="emailInput"
+				placeholder="Enter your email"
+				key="email"
+				aria-label="Email Address"
+				autocomplete="email" />
+		</div>
+		<div class="app-field app-field-full">
+			<label
+				for="JoiningdatInput"
+				class="form-label"
+				>Joining Date</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				date-picker="flatpickr"
+				id="JoiningdatInput"
+				data-date-format="d M, Y"
+				data-deafult-date="24 Nov, 2021"
+				placeholder="Select date"
+				key="created.on"
+				aria-label="Joining Date"
+				autocomplete="off" />
+		</div>
+		<div class="app-field app-field-full">
+			<label
+				for="skillsInput"
+				class="form-label"
+				>Skills</label
+			>
+			<div
+				class="dropdown form-control select-control"
+				search_id="profile-skills"
+				data-options
+				click-query="$this :scope > input[type=search]"
+				click.$focus="$undefined">
+				<div class="select-values" data-selected-options aria-label="Selected skills"></div>
+				<input
+					id="skillsInput"
+					type="search"
+					class="select-search"
+					placeholder="Search skills"
+					aria-label="Search and select skills"
+					role="combobox"
+					aria-autocomplete="list"
+					aria-controls="profile-skills-options"
+					aria-expanded="false"
+					aria-haspopup="dialog"
+					aria-open
+					focus.aria-expanded="true"
+					input.aria-expanded="true"
+					autocomplete="off"
+					save="false"
+					search_id="profile-skills"
+					search-query="$next [data-option]" />
+				<div
+					id="profile-skills-options"
+					class="dropdown-menu w-100 p-3"
+					role="dialog"
+					aria-label="Select skills"
+					aria-hidden="true"
+					aria-close-on="outside"
+					aria-close="false">
+					<div
+						role="group"
+						aria-label="Skills"
+						render="options"
+						render-data='{"options":["Illustrator","Photoshop","Figma","Sketch","InDesign"]}'
+						render-query="template">
+						<template render-as="skill">
+							<div>
+								<label
+									class="dropdown-item select-option d-flex align-items-center gap-2 mb-0"
+									data-option>
+									<input
+										type="checkbox"
+										class="form-check-input mt-0"
+										name="skillsInput"
+										key="skills"
+										value="{{skill}}"
+										input-query="$this:checked $closest [data-options] [data-selected-options]:not(:has([data-selected-option='{{skill}}']))"
+										input-value="$query($this:checked $parent $next).getValue()"
+										input.insertAdjacentHTML="beforeend"
+										change-query="$this:not(:checked) $closest [data-options] [data-selected-options] > [data-selected-option='{{skill}}']"
+										change.$remove="" />
+									<span>{{skill}}</span>
+								</label>
+								<div hidden get-value-evaluate="false">
+									<span
+										class="select-chip"
+										data-selected-option="{{skill}}">
+										<span>{{skill}}</span>
+										<button
+											type="button"
+											class="btn-close"
+											aria-label="Remove {{skill}}"
+											click-query="$closest [data-options] input[value='{{skill}}']:checked"
+											click-stop-propagation="true"
+											click.click="$true"></button>
+									</span>
+								</div>
+							</div>
+						</template>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="companyNameInput"
+				class="form-label"
+				>Company Name</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="companyNameInput"
+				placeholder="Company Name"
+				key="company"
+				aria-label="Company Name"
+				autocomplete="organization" />
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="titleInput"
+				class="form-label"
+				>Title</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="titleInput"
+				placeholder="Title"
+				key="title"
+				aria-label="Title"
+				autocomplete="organization-title" />
+		</div>
+		<div class="app-field app-field-half">
+			<label
+				for="websiteInput1"
+				class="form-label"
+				>Website</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="websiteInput1"
+				placeholder="www.example.com"
+				key="website"
+				aria-label="Website"
+				autocomplete="url" />
+		</div>
+		<div class="app-field app-field-third">
+			<label
+				for="cityInput"
+				class="form-label"
+				>City</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="cityInput"
+				placeholder="City"
+				key="city"
+				aria-label="City"
+				autocomplete="address-level2" />
+		</div>
+		<div class="app-field app-field-third">
+			<label
+				for="countryInput"
+				class="form-label"
+				>Country</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				id="countryInput"
+				placeholder="Country"
+				key="country"
+				aria-label="Country"
+				autocomplete="country" />
+		</div>
+		<div class="app-field app-field-third">
+			<label
+				for="zipcodeInput"
+				class="form-label"
+				>Zip Code</label
+			>
+			<input
+				type="text"
+				class="form-control"
+				minlength="5"
+				maxlength="6"
+				id="zipcodeInput"
+				placeholder="Enter zipcode"
+				key="zip_code"
+				aria-label="Zip Code"
+				autocomplete="postal-code" />
+		</div>
+		<div class="app-field app-field-full">
+			<div class="mb-3 pb-2">
+				<label
+					for="exampleFormControlTextarea"
+					class="form-label"
+					>Description</label
+				>
+				<textarea
+					class="form-control"
+					id="exampleFormControlTextarea"
+					placeholder="Enter your description"
+					rows="3"
+					key="description"
+					aria-label="Description"></textarea>
+			</div>
+		</div>
+	</div>
+</div>

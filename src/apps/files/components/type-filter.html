@@ -1,0 +1,109 @@
+<div
+	class="btn-group"
+	role="group"
+	aria-label="File categories">
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-all"
+		name="file-type"
+		key="file-type"
+		value=""
+		value-evaluate="false"
+		checked
+		aria-default="true"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":""},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-all"
+		>All Media</label
+	>
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-images"
+		name="file-type"
+		key="file-type"
+		value="^image/"
+		value-evaluate="false"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":""},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-images"
+		>Images</label
+	>
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-videos"
+		name="file-type"
+		key="file-type"
+		value="^video/"
+		value-evaluate="false"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":""},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-videos"
+		>Videos</label
+	>
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-audio"
+		name="file-type"
+		key="file-type"
+		value="^audio/"
+		value-evaluate="false"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":""},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-audio"
+		>Audio</label
+	>
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-docs"
+		name="file-type"
+		key="file-type"
+		value="^(application|text)/"
+		value-evaluate="false"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":""},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-docs"
+		>Docs</label
+	>
+	<input
+		type="radio"
+		class="btn-check"
+		id="file-type-favorites"
+		name="file-type"
+		key="file-type"
+		value=""
+		value-evaluate="false"
+		aria-controls="list-view"
+		filter-query-key="content-type.$regex"
+		filter-query="$document #list-view [data-files-results]:not([hidden])[]"
+		state='{"files-folders":{"hidden":true,"array":""},"files-list":{"filter-query-key":"content-type.$ne","filter-query-value":"text/directory","filter-sort-key":"name","filter-sort-direction":"asc"},"files-path":{"value":""},"files-owner":{"value":""},"files-starred":{"value":"$user_id"},"files-deletion":{"$setValue":"[{\"deleted\":{\"$exists\":false}},{\"deleted\":false}]"}}' />
+	<label
+		class="btn btn-outline-primary material-shadow-none mb-0"
+		for="file-type-favorites"
+		>Favorites</label
+	>
+</div>

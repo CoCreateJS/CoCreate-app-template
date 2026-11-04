@@ -1,0 +1,77 @@
+<header
+	class="card-header offcanvas-app-topbar flex-shrink-0 justify-content-between">
+	<h5 class="mb-0">Recent activities</h5>
+	<div
+		class="d-flex flex-grow-1 align-items-center justify-content-end gap-1">
+		<button
+			type="button"
+			class="offcanvas-app-dock btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle text-muted"
+			state-to="offcanvas-app-dock"
+			state.docked="true"
+			aria-label="Dock"
+			title="Dock">
+			<i
+				src="/assets/svg/remix/layout-right-line.svg"
+				class="fs-22"
+				aria-hidden="true"></i>
+		</button>
+		<button
+			type="button"
+			class="offcanvas-app-undock btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle text-muted"
+			state-to="offcanvas-app-dock"
+			state.docked="false"
+			aria-label="Undock"
+			title="Undock">
+			<i
+				src="/assets/svg/remix/layout-right-2-line.svg"
+				class="fs-22"
+				aria-hidden="true"></i>
+		</button>
+		<button
+			type="button"
+			class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle text-muted"
+			aria-label="Close"
+			aria-controls="offcanvas-app"
+			data-panel-close="offcanvas-app"
+			aria-close
+			aria-expanded="true"
+			title="Close">
+			<i
+				src="/assets/svg/remix/close-line.svg"
+				class="fs-22"
+				aria-hidden="true"></i>
+		</button>
+	</div>
+</header>
+<div
+	class="card-body app-panel"
+	scrollbar>
+	<div
+		id="activities-list"
+		class="activity-panel d-flex flex-column gap-3"
+		aria-live="polite"
+		array="activities"
+		object
+		filter-sort-key="_id"
+		filter-sort-direction="desc"
+		filter-limit="20"
+		render-query="[template='activity-card']"
+		render-reverse>
+		<section
+			template="activity-card"
+			class="activity-panel-item min-width:0">
+			<div>
+				<form
+					array="{{object.array}}"
+					object="{{object._id}}">
+					<div
+						src="/apps/{{object.array}}/components/card.html"></div>
+				</form>
+			</div>
+		</section>
+		<div
+			style="min-height: 3px; max-height: 3px"
+			filter-on="scroll"
+			filter-query="$parent"></div>
+	</div>
+</div>

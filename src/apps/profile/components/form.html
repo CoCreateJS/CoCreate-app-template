@@ -1,0 +1,65 @@
+	<div class="card-body d-flex flex-column gap-4 h-100">
+		<section class="d-flex flex-wrap align-items-center gap-3 pb-3">
+			<div
+				class="app-image-editor flex-shrink-0"
+				src="/components/profile-img.html"></div>
+			<div class="flex-grow-1 min-width:0">
+				<h5 class="app-title mb-1">
+					<span key="first_name"></span> <span key="last_name"></span>
+				</h5>
+				<p
+					class="text-muted mb-2"
+					key="title"></p>
+				<div class="d-flex flex-wrap gap-2 text-muted">
+					<span
+						><i src="/assets/svg/remix/building-line.svg" class="me-1"
+							aria-hidden="true"></i><span key="company"></span
+					></span>
+					<span
+						><i src="/assets/svg/remix/map-pin-user-line.svg" class="me-1"
+							aria-hidden="true"></i><span key="city"></span>, <span key="country"></span
+					></span>
+				</div>
+			</div>
+		</section>
+		<section class="w-100 min-width:0">
+			<div class="mb-4">
+				<ul
+					class="nav nav-tabs-custom rounded border-bottom-0"
+					role="tablist"
+					aria-label="Profile form sections">
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							state-id="personalDetails-tab"
+							state='{"personalDetails-tab":{"aria-selected":"true"},"changePassword-tab":{"aria-selected":"false"}}'
+							state-to="profile-tab-view"
+							state.src="/apps/profile/components/personal-details.html"
+							role="tab"
+							aria-selected="true"
+							id="personalDetails-tab">
+							<i class="fas fa-home"></i> Personal Details
+						</a>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							state-id="changePassword-tab"
+							state='{"personalDetails-tab":{"aria-selected":"false"},"changePassword-tab":{"aria-selected":"true"}}'
+							state-to="profile-tab-view"
+							state.src="/apps/profile/components/password.html"
+							role="tab"
+							aria-selected="false"
+							id="changePassword-tab">
+							<i class="far fa-user"></i> Change Password
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div
+				class="tab-content"
+				id="profile-tab-view"
+				state-id="profile-tab-view"
+				src="/apps/profile/components/personal-details.html"></div>
+		</section>
+	</div>

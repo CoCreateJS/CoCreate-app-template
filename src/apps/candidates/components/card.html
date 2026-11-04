@@ -1,0 +1,38 @@
+<article class="card app-card">
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon bg-secondary-subtle text-secondary">
+						<span class="avatar-initial" key="first_name[0]"></span>
+						<span class="avatar-initial" key="last_name[0]"></span>
+						<img
+							class="app-custom-image object-fit-cover"
+							key="avatar[0].src"
+							alt="Candidate avatar"
+							onerror="this.hidden = true"
+							hidden
+							onload="this.hidden = false" />
+					</span>
+				</span>
+				<h5 class="app-title" key="name"></h5>
+			</div>
+			<span class="text-muted fs-12" key="availability"></span>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="status"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+			</div>
+		</div>
+		<p class="app-description" key="description"></p>
+		<div
+			class="d-flex flex-wrap gap-1 pt-2 border-top border-top-dashed"
+			key="skills"
+			render-query="[template='candidate-card-skill']">
+			<span template="candidate-card-skill" class="badge border border-info text-info">{{skills}}</span>
+		</div>
+	</div>
+</article>

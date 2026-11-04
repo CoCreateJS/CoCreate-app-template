@@ -1,0 +1,52 @@
+<article class="card app-card">
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon">
+						<i src="/assets/svg/remix/shopping-bag-line.svg" aria-hidden="true"></i>
+					</span>
+					<img
+						class="app-custom-image"
+						key="avatar[0].src"
+						alt=""
+						hidden
+						onload="this.hidden = false"
+						onerror="this.hidden = true" />
+				</span>
+				<h5 class="app-title" key="po_number"></h5>
+			</div>
+			<span class="text-muted fs-12">Purchase order</span>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="status"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+			</div>
+		</div>
+		<div>
+			<span class="text-muted fs-12 d-block">Supplier</span>
+			<strong key="supplier"></strong>
+		</div>
+		<div class="d-flex flex-wrap gap-3">
+			<div>
+				<span class="text-muted fs-12 d-block">Subtotal</span>
+				<strong key="subtotal"></strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Tax</span>
+				<strong key="tax"></strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Total</span>
+				<strong key="total"></strong>
+			</div>
+		</div>
+		<div class="d-flex justify-content-between pt-2 border-top border-top-dashed text-muted fs-12">
+			<span>Ordered: <span key="order_date"></span></span>
+			<span>Expected: <span key="expected_delivery"></span></span>
+		</div>
+	</div>
+</article>

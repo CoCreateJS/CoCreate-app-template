@@ -1,0 +1,56 @@
+<article class="card app-card" render>
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon bg-secondary-subtle text-secondary">
+						<span class="avatar-initial" key="first_name[0]"></span>
+						<span class="avatar-initial" key="last_name[0]"></span>
+						<img
+							class="app-custom-image object-fit-cover"
+							key="avatar[0].src"
+							alt="Contact avatar"
+							hidden
+							onload="this.hidden = false"
+							onerror="this.hidden = true" />
+					</span>
+				</span>
+				<h5 class="app-title" key="name"></h5>
+			</div>
+			<span class="text-muted d-block text-truncate">
+				<span key="title"></span>
+				<span aria-hidden="true">·</span>
+				<span key="company"></span>
+			</span>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="status"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+			</div>
+		</div>
+		<p class="app-description" key="description"></p>
+		<div class="d-flex flex-column gap-2 text-muted fs-12">
+			<span>
+				<i src="/assets/svg/remix/mail-line.svg" class="me-2"></i>
+				<span key="email"></span>
+			</span>
+			<span>
+				<i src="/assets/svg/remix/phone-line.svg" class="me-2"></i>
+				<span key="phone"></span>
+			</span>
+			<span><i src="/assets/svg/remix/map-pin-line.svg" class="me-2"></i> <span key="city"></span>, <span key="country"></span></span>
+		</div>
+		<div
+			class="d-flex flex-wrap gap-1 pt-2 border-top border-top-dashed"
+			key="type"
+			render-query="[template='contact-card-type']">
+			<span template="contact-card-type" class="badge bg-info-subtle text-info">{{type}}</span>
+		</div>
+		<div class="d-flex flex-wrap gap-1" key="tags" render-query="[template='contact-card-tag']">
+			<span template="contact-card-tag" class="badge bg-secondary-subtle text-secondary">{{tags}}</span>
+		</div>
+	</div>
+</article>

@@ -1,0 +1,551 @@
+{
+  "method": "object.update",
+  "array": "invoices",
+  "upsert": true,
+  "object": [
+    {
+      "_id": "67f0a1b2c3d4e5f607182901",
+      "invoice": {
+        "number": "24001"
+      },
+      "customer": "Jordan Avery",
+      "client_id": "69c4d7ae0d1702f87dba0f98",
+      "email": "jordan.avery@CoCreateJS.com",
+      "user_id": "5ff747727005da1c272740ac",
+      "date": "2026-03-25T10:00:00.000Z",
+      "status": "Unpaid",
+      "type": "invoice",
+      "currency": "USD",
+      "isCart": true,
+      "tags": [
+        "cart",
+        "starter-package"
+      ],
+      "company": {
+        "logo": "assets/images/company-logo.png",
+        "email": "concierge@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "GEN-24001"
+      },
+      "address": {
+        "billing": {
+          "fullName": "Jordan Avery",
+          "address": "1200 Bay Harbor Dr, Miami, FL 33154",
+          "phoneNumber": "(305) 555-0182",
+          "taxNumber": "CART-24001"
+        },
+        "shipping": {
+          "fullName": "Jordan Avery",
+          "address": "1200 Bay Harbor Dr, Miami, FL 33154",
+          "phoneNumber": "(305) 555-0182",
+          "taxNumber": "CART-24001"
+        }
+      },
+      "items": [
+        {
+          "_id": "67f0a1b2c3d4e5f607182911",
+          "href": "/products/discover/",
+          "name": "Discover",
+          "description": "At-home biological baseline and unified insight report.",
+          "price": 250000,
+          "quantity": 1,
+          "total": 250000
+        },
+        {
+          "_id": "67f0a1b2c3d4e5f607182912",
+          "href": "/products/cell-growth-factors-full-vial-loading-dose/",
+          "name": "Cell Growth Factors - Full Vial Loading Dose",
+          "description": "Clinical loading dose for accelerated regenerative initiation.",
+          "price": 500000,
+          "quantity": 1,
+          "total": 500000
+        },
+        {
+          "_id": "67f0a1b2c3d4e5f607182913",
+          "href": "/products/needleless-injector-device/",
+          "name": "Needleless Injection",
+          "description": "Needle-free at-home delivery system for ongoing maintenance.",
+          "price": 150000,
+          "quantity": 1,
+          "total": 150000
+        }
+      ],
+      "payment": {
+        "status": "Unpaid",
+        "method": "Awaiting Payment",
+        "cardholderName": "Jordan Avery",
+        "cardNumber": "Pending",
+        "amount": 900000
+      },
+      "subtotal": 900000,
+      "discount": 0,
+      "tax": 0,
+      "shipping": 0,
+      "total": 900000,
+      "notes": "This unpaid invoice is the active shopping cart. Once payment is completed, it continues as the customer's invoice record.",
+      "modified": {
+        "on": "2026-03-25T10:00:00.000Z"
+      }
+    },
+    {
+      "_id": "67f0a1b2c3d4e5f607182902",
+      "invoice": {
+        "number": "24002"
+      },
+      "customer": "Morgan Ellis",
+      "user_id": "5ff747727005da1c272740ac",
+      "email": "morgan.ellis@CoCreateJS.com",
+      "date": "2026-03-18T14:30:00.000Z",
+      "status": "Paid",
+      "type": "invoice",
+      "currency": "USD",
+      "isCart": false,
+      "tags": [
+        "optimize",
+        "paid"
+      ],
+      "company": {
+        "logo": "assets/images/company-logo.png",
+        "email": "concierge@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "GEN-24002"
+      },
+      "address": {
+        "billing": {
+          "fullName": "Morgan Ellis",
+          "address": "910 Sunset Blvd, Los Angeles, CA 90028",
+          "phoneNumber": "(323) 555-0114",
+          "taxNumber": "INV-24002"
+        },
+        "shipping": {
+          "fullName": "Morgan Ellis",
+          "address": "910 Sunset Blvd, Los Angeles, CA 90028",
+          "phoneNumber": "(323) 555-0114",
+          "taxNumber": "INV-24002"
+        }
+      },
+      "items": [
+        {
+          "_id": "67f0a1b2c3d4e5f607182921",
+          "href": "/products/discover/",
+          "name": "Discover",
+          "description": "Comprehensive genomic, microbiome, hormone, and aging baseline.",
+          "price": 250000,
+          "quantity": 1,
+          "total": 250000
+        },
+        {
+          "_id": "67f0a1b2c3d4e5f607182922",
+          "href": "/products/comprehensive-vitamin-iv/",
+          "name": "Comprehensive Vitamin IV",
+          "description": "Broad-spectrum nutritional infusion for immediate optimization.",
+          "price": 20000,
+          "quantity": 1,
+          "total": 20000
+        }
+      ],
+      "payment": {
+        "status": "Paid",
+        "method": "Visa",
+        "cardholderName": "Morgan Ellis",
+        "cardNumber": "**** 1042",
+        "amount": 270000
+      },
+      "subtotal": 270000,
+      "discount": 0,
+      "tax": 0,
+      "shipping": 0,
+      "total": 270000,
+      "notes": "Optimization invoice completed after diagnostic enrollment and first in-clinic infusion.",
+      "modified": {
+        "on": "2026-03-18T14:30:00.000Z"
+      }
+    },
+    {
+      "_id": "67f0a1b2c3d4e5f607182903",
+      "invoice": {
+        "number": "24003"
+      },
+      "customer": "Taylor Brooks",
+      "client_id": "69c4d7ae0d1702f87dba0f98",
+      "email": "taylor.brooks@CoCreateJS.com",
+      "date": "2026-03-20T09:15:00.000Z",
+      "status": "Unpaid",
+      "type": "invoice",
+      "currency": "USD",
+      "isCart": false,
+      "tags": [
+        "maintenance",
+        "regenerate"
+      ],
+      "company": {
+        "logo": "assets/images/company-logo.png",
+        "email": "concierge@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "GEN-24003"
+      },
+      "address": {
+        "billing": {
+          "fullName": "Taylor Brooks",
+          "address": "44 Harbor Point, Seattle, WA 98101",
+          "phoneNumber": "(206) 555-0173",
+          "taxNumber": "INV-24003"
+        },
+        "shipping": {
+          "fullName": "Taylor Brooks",
+          "address": "44 Harbor Point, Seattle, WA 98101",
+          "phoneNumber": "(206) 555-0173",
+          "taxNumber": "INV-24003"
+        }
+      },
+      "items": [
+        {
+          "_id": "67f0a1b2c3d4e5f607182931",
+          "href": "/products/cell-growth-factors-0-5-ml-subcutaneous/",
+          "name": "Cell Growth Factors - 0.5 mL Subcutaneous",
+          "description": "Subcutaneous maintenance dose for ongoing regenerative support.",
+          "price": 62500,
+          "quantity": 2,
+          "total": 125000
+        },
+        {
+          "_id": "67f0a1b2c3d4e5f607182932",
+          "href": "/products/microneedling-device/",
+          "name": "Microneedling",
+          "description": "At-home topical delivery system for skin and scalp support.",
+          "price": 150000,
+          "quantity": 1,
+          "total": 150000
+        }
+      ],
+      "payment": {
+        "status": "Unpaid",
+        "method": "Awaiting Payment",
+        "cardholderName": "Taylor Brooks",
+        "cardNumber": "Pending",
+        "amount": 275000
+      },
+      "subtotal": 275000,
+      "discount": 0,
+      "tax": 0,
+      "shipping": 0,
+      "total": 275000,
+      "notes": "Maintenance invoice prepared for the next regenerative cycle.",
+      "modified": {
+        "on": "2026-03-20T09:15:00.000Z"
+      }
+    },
+    {
+      "_id": "67f0a1b2c3d4e5f607182904",
+      "invoice": {
+        "number": "24004"
+      },
+      "customer": "Casey Morgan",
+      "client_id": "69c4d7ae0d1702f87dba0f98",
+      "email": "casey.morgan@CoCreateJS.com",
+      "user_id": "5ff747727005da1c272740ac",
+      "date": "2026-03-22T16:45:00.000Z",
+      "status": "Paid",
+      "type": "invoice",
+      "currency": "USD",
+      "isCart": false,
+      "tags": [
+        "custom-supplements",
+        "paid"
+      ],
+      "company": {
+        "logo": "assets/images/company-logo.png",
+        "email": "concierge@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "GEN-24004"
+      },
+      "address": {
+        "billing": {
+          "fullName": "Casey Morgan",
+          "address": "85 East Oak St, Chicago, IL 60611",
+          "phoneNumber": "(312) 555-0190",
+          "taxNumber": "INV-24004"
+        },
+        "shipping": {
+          "fullName": "Casey Morgan",
+          "address": "85 East Oak St, Chicago, IL 60611",
+          "phoneNumber": "(312) 555-0190",
+          "taxNumber": "INV-24004"
+        }
+      },
+      "items": [
+        {
+          "_id": "67f0a1b2c3d4e5f607182941",
+          "href": "/products/custom-oral-supplementation/",
+          "name": "Custom Oral Supplementation",
+          "description": "Prescription-based daily oral protocol curated from Discover results.",
+          "price": 45000,
+          "quantity": 1,
+          "total": 45000
+        },
+        {
+          "_id": "67f0a1b2c3d4e5f607182942",
+          "href": "/products/cell-growth-factors-1-ml-intramuscular/",
+          "name": "Cell Growth Factors - 1 mL Intramuscular",
+          "description": "Intramuscular pre-filled dose for structured at-home regenerative support.",
+          "price": 125000,
+          "quantity": 1,
+          "total": 125000
+        }
+      ],
+      "payment": {
+        "status": "Paid",
+        "method": "Mastercard",
+        "cardholderName": "Casey Morgan",
+        "cardNumber": "**** 8834",
+        "amount": 170000
+      },
+      "subtotal": 170000,
+      "discount": 0,
+      "tax": 0,
+      "shipping": 0,
+      "total": 170000,
+      "notes": "Prescription maintenance bundle paid and queued for shipment.",
+      "modified": {
+        "on": "2026-03-22T16:45:00.000Z"
+      }
+    },
+    {
+      "_id": "68b6e6c10000000000000001",
+      "estimate_no": "EST-25001",
+      "title": "Growth Platform Implementation",
+      "contact_id": "68765ca00960f12deb7f050f",
+      "client_name": "James Price",
+      "date": "2026-08-25T10:00:00.000Z",
+      "total_amount": 18500,
+      "amount_total_pay": 18500,
+      "payment_status": "Pending",
+      "payment_method": "Awaiting Approval",
+      "description": "Implementation and onboarding for the growth platform.",
+      "notes": "Estimate valid for 30 days.",
+      "status": "Sent",
+      "stage": "sent",
+      "type": "estimate",
+      "tags": ["platform", "implementation"],
+      "registration_number": "EST-25001",
+      "company_email": "sales@CoCreateJS.com",
+      "company_website": "https://CoCreateJS.com",
+      "company_contact_no": "(800) 555-2400",
+      "billing_name": "James Price",
+      "billing_address": "Miami, Florida, United States",
+      "billing_phone_no": "(305) 555-0142",
+      "billing_tax_no": "TAX-25001",
+      "shipping_name": "James Price",
+      "shipping_address": "Miami, Florida, United States",
+      "shipping_phone_no": "(305) 555-0142",
+      "shipping_tax_no": "TAX-25001",
+      "company": {
+        "logo": "/assets/images/logos/dark.png",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "EST-25001",
+        "email": "sales@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400"
+      },
+      "billing": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25001"
+      },
+      "shipping": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25001"
+      },
+      "items": [
+        {
+          "name": "Growth Platform Implementation",
+          "description": "Implementation and onboarding for the growth platform.",
+          "rate": 18500,
+          "quantity": 1,
+          "amount": 18500
+        }
+      ],
+      "cart": {
+        "subtotal": 18500,
+        "tax": 0,
+        "discount": 0,
+        "shipping": 0,
+        "total": 18500
+      },
+      "payment": {
+        "status": "Pending",
+        "method": "Awaiting Approval",
+        "cardholderName": "James Price",
+        "cardNumber": "Pending",
+        "amount": 18500
+      },
+      "modified": { "on": "2026-08-25T10:00:00.000Z" }
+    },
+    {
+      "_id": "68b6e6c10000000000000002",
+      "estimate_no": "EST-25002",
+      "title": "CRM Sales Automation",
+      "contact_id": "68765ca00960f12deb7f050f",
+      "client_name": "James Price",
+      "date": "2026-08-27T14:30:00.000Z",
+      "total_amount": 9200,
+      "amount_total_pay": 9200,
+      "payment_status": "Unpaid",
+      "payment_method": "Bank Transfer",
+      "description": "CRM setup, workflow automation, and team training.",
+      "notes": "Includes 60 days of implementation support.",
+      "status": "Draft",
+      "stage": "draft",
+      "type": "estimate",
+      "tags": ["crm", "automation"],
+      "registration_number": "EST-25002",
+      "company_email": "sales@CoCreateJS.com",
+      "company_website": "https://CoCreateJS.com",
+      "company_contact_no": "(800) 555-2400",
+      "billing_name": "James Price",
+      "billing_address": "Miami, Florida, United States",
+      "billing_phone_no": "(305) 555-0142",
+      "billing_tax_no": "TAX-25002",
+      "shipping_name": "James Price",
+      "shipping_address": "Miami, Florida, United States",
+      "shipping_phone_no": "(305) 555-0142",
+      "shipping_tax_no": "TAX-25002",
+      "company": {
+        "logo": "/assets/images/logos/dark.png",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "EST-25002",
+        "email": "sales@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400"
+      },
+      "billing": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25002"
+      },
+      "shipping": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25002"
+      },
+      "items": [
+        {
+          "name": "CRM Sales Automation",
+          "description": "CRM setup, workflow automation, and team training.",
+          "rate": 9200,
+          "quantity": 1,
+          "amount": 9200
+        }
+      ],
+      "cart": {
+        "subtotal": 9200,
+        "tax": 0,
+        "discount": 0,
+        "shipping": 0,
+        "total": 9200
+      },
+      "payment": {
+        "status": "Unpaid",
+        "method": "Bank Transfer",
+        "cardholderName": "James Price",
+        "cardNumber": "Pending",
+        "amount": 9200
+      },
+      "modified": { "on": "2026-08-27T14:30:00.000Z" }
+    },
+    {
+      "_id": "68b6e6c10000000000000003",
+      "estimate_no": "EST-25003",
+      "title": "Managed Server Infrastructure",
+      "contact_id": "68765ca00960f12deb7f050f",
+      "client_name": "James Price",
+      "date": "2026-08-29T09:15:00.000Z",
+      "total_amount": 24000,
+      "amount_total_pay": 24000,
+      "payment_status": "Pending",
+      "payment_method": "Credit Card",
+      "description": "Managed server deployment, monitoring, and scaling.",
+      "notes": "Annual infrastructure estimate.",
+      "status": "Accepted",
+      "stage": "accepted",
+      "type": "estimate",
+      "tags": ["servers", "infrastructure"],
+      "registration_number": "EST-25003",
+      "company_email": "sales@CoCreateJS.com",
+      "company_website": "https://CoCreateJS.com",
+      "company_contact_no": "(800) 555-2400",
+      "billing_name": "James Price",
+      "billing_address": "Miami, Florida, United States",
+      "billing_phone_no": "(305) 555-0142",
+      "billing_tax_no": "TAX-25003",
+      "shipping_name": "James Price",
+      "shipping_address": "Miami, Florida, United States",
+      "shipping_phone_no": "(305) 555-0142",
+      "shipping_tax_no": "TAX-25003",
+      "company": {
+        "logo": "/assets/images/logos/dark.png",
+        "address": "Miami, Florida, United States",
+        "postalCode": "33101",
+        "registrationNumber": "EST-25003",
+        "email": "sales@CoCreateJS.com",
+        "website": "https://CoCreateJS.com",
+        "contactNo": "(800) 555-2400"
+      },
+      "billing": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25003"
+      },
+      "shipping": {
+        "fullName": "James Price",
+        "address": "Miami, Florida, United States",
+        "phoneNumber": "(305) 555-0142",
+        "taxNumber": "TAX-25003"
+      },
+      "items": [
+        {
+          "name": "Managed Server Infrastructure",
+          "description": "Managed server deployment, monitoring, and scaling.",
+          "rate": 24000,
+          "quantity": 1,
+          "amount": 24000
+        }
+      ],
+      "cart": {
+        "subtotal": 24000,
+        "tax": 0,
+        "discount": 0,
+        "shipping": 0,
+        "total": 24000
+      },
+      "payment": {
+        "status": "Pending",
+        "method": "Credit Card",
+        "cardholderName": "James Price",
+        "cardNumber": "Pending",
+        "amount": 24000
+      },
+      "modified": { "on": "2026-08-29T09:15:00.000Z" }
+    }
+  ]
+}

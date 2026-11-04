@@ -1,0 +1,122 @@
+<style>
+	cocreate-select.styleunit selected {
+		margin: 0;
+		text-align: center;
+		background: none;
+	}
+	.pickr {
+		padding: 0px;
+		width: 100%;
+	}
+	.pickr .pcr-button {
+		height: 24px;
+		width: 100%;
+		box-shadow: none !important;
+	}
+</style>
+
+<div class="builder-right-panel-root">
+	<div class="builder-right-panel-content">
+		<div
+			class="builder-property-form builder-panel-scroll"
+			scrollbar
+			scrollbar-type="scrolly">
+			<div class="builder-panel-scroll-viewport">
+				<div
+					id="builder-right-attributes-view"
+					class="builder-panel-view"
+					aria-label="Element attributes"
+					tabindex="0">
+					<section class="builder-panel-section-body" aria-labelledby="builder-attributes-heading">
+						<div class="builder-panel-section-heading">
+							<span id="builder-attributes-heading">Attributes</span>
+						</div>
+						<div class="mb-3">
+							<div class="d-flex align-items-center justify-content-between mb-1">
+								<label class="small fw-medium mb-0" for="builder-attribute-value-1">id</label>
+								<div class="dropdown d-inline-block">
+									<a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle dropdown text-muted" role="button" aria-haspopup="menu" aria-controls="builder-attribute-id-menu" aria-expanded="false" aria-label="Actions for id">
+										<i src="/assets/svg/remix/more-2-fill.svg" class="align-middle fs-18" aria-hidden="true"></i>
+									</a>
+									<ul id="builder-attribute-id-menu" class="dropdown-menu dropdown-menu-end" aria-close-on="anywhere" role="menu" aria-label="id actions">
+										<li><a class="dropdown-item text-danger" role="menuitem">Delete attribute</a></li>
+									</ul>
+								</div>
+							</div>
+							<input id="builder-attribute-value-1" class="form-control form-control-sm" value="hero-title" placeholder="id value" aria-label="id value" />
+						</div>
+						<div class="mb-3">
+							<div class="d-flex align-items-center justify-content-between mb-1">
+								<label class="small fw-medium mb-0" for="builder-attribute-value-2">class</label>
+								<div class="dropdown d-inline-block">
+									<a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle dropdown text-muted" role="button" aria-haspopup="menu" aria-controls="builder-attribute-class-menu" aria-expanded="false" aria-label="Actions for class">
+										<i src="/assets/svg/remix/more-2-fill.svg" class="align-middle fs-18" aria-hidden="true"></i>
+									</a>
+									<ul id="builder-attribute-class-menu" class="dropdown-menu dropdown-menu-end" aria-close-on="anywhere" role="menu" aria-label="class actions">
+										<li><a class="dropdown-item text-danger" role="menuitem">Delete attribute</a></li>
+									</ul>
+								</div>
+							</div>
+							<input id="builder-attribute-value-2" class="form-control form-control-sm" value="display-4 fw-bold" placeholder="class value" aria-label="class value" />
+						</div>
+
+						<div class="mt-2 pt-2 border-top">
+							<div class="d-flex align-items-center gap-2">
+								<label class="visually-hidden" for="builder-attribute-name-new">New attribute name</label>
+								<input id="builder-attribute-name-new" class="form-control form-control-sm" placeholder="Name" aria-label="New attribute name" />
+								<span class="text-muted">=</span>
+								<label class="visually-hidden" for="builder-attribute-value-new">New attribute value</label>
+								<input id="builder-attribute-value-new" class="form-control form-control-sm" placeholder="Value" aria-label="New attribute value" />
+								<button type="button" class="btn btn-sm btn-light" title="Add attribute" aria-label="Add attribute">
+									<i src="/assets/svg/plus.svg" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+					</section>
+
+					<section class="mt-4" aria-labelledby="builder-styles-heading">
+						<div class="d-flex align-items-center justify-content-between mb-2">
+							<span id="builder-styles-heading" class="small fw-medium">Styles</span>
+							<div class="dropdown d-inline-block">
+								<a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle dropdown text-muted" role="button" aria-haspopup="menu" aria-controls="builder-attribute-style-menu" aria-expanded="false" aria-label="Actions for style">
+									<i src="/assets/svg/remix/more-2-fill.svg" class="align-middle fs-18" aria-hidden="true"></i>
+								</a>
+								<ul id="builder-attribute-style-menu" class="dropdown-menu dropdown-menu-end" aria-close-on="anywhere" role="menu" aria-label="style actions">
+									<li><a class="dropdown-item text-danger" role="menuitem">Delete style attribute</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-2">
+							<div class="card-body p-2">
+								<div class="d-flex align-items-center justify-content-between mb-1">
+									<label class="small fw-medium mb-0" for="builder-style-value-color">color</label>
+									<div class="dropdown d-inline-block">
+										<a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle dropdown text-muted" role="button" aria-haspopup="menu" aria-controls="builder-style-color-menu" aria-expanded="false" aria-label="Actions for color style property">
+											<i src="/assets/svg/remix/more-2-fill.svg" class="align-middle fs-18" aria-hidden="true"></i>
+										</a>
+										<ul id="builder-style-color-menu" class="dropdown-menu dropdown-menu-end" aria-close-on="anywhere" role="menu" aria-label="color property actions">
+											<li><a class="dropdown-item text-danger" role="menuitem">Delete property</a></li>
+										</ul>
+									</div>
+								</div>
+								<input id="builder-style-value-color" class="form-control form-control-sm" value="#263238" placeholder="color value" aria-label="color style value" />
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body p-2">
+								<div class="d-flex align-items-center justify-content-between mb-1">
+									<label class="visually-hidden" for="builder-style-property-new">New style property</label>
+									<input id="builder-style-property-new" class="form-control form-control-sm" placeholder="Property" aria-label="New style property" />
+									<button type="button" class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" title="Add style property" aria-label="Add style property">
+										<i src="/assets/svg/plus.svg" aria-hidden="true"></i>
+									</button>
+								</div>
+								<label class="visually-hidden" for="builder-style-value-new">New style value</label>
+								<input id="builder-style-value-new" class="form-control form-control-sm" placeholder="Value" aria-label="New style value" />
+							</div>
+						</div>
+					</section>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<article class="card app-card">
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon">
+						<i src="/assets/svg/remix/briefcase-2-line.svg" aria-hidden="true"></i>
+					</span>
+					<img
+						class="app-custom-image"
+						key="companyLogo"
+						alt=""
+						hidden
+						onload="this.hidden = false"
+						onerror="this.hidden = true" />
+				</span>
+				<h5 class="app-title" key="jobTitle"></h5>
+			</div>
+			<span class="text-muted fs-12" key="companyName"></span>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="status"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+			</div>
+		</div>
+		<p class="app-description" key="description"></p>
+		<div class="d-flex flex-wrap gap-3">
+			<div>
+				<span class="text-muted fs-12 d-block">Type</span>
+				<strong key="type"></strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Experience</span>
+				<strong key="experience"></strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Position</span>
+				<strong key="position"></strong>
+			</div>
+		</div>
+		<div class="d-flex flex-column gap-2 text-muted fs-12">
+			<span>
+				<i src="/assets/svg/remix/map-pin-line.svg" class="me-2"></i>
+				<span key="location"></span>
+			</span>
+			<span><i src="/assets/svg/remix/money-dollar-circle-line.svg" class="me-2"></i><span key="start_salary"></span>–<span key="last_salary"></span></span>
+		</div>
+		<div class="d-flex justify-content-between pt-2 border-top border-top-dashed text-muted fs-12">
+			<span>Closes: <span key="close_date"></span></span>
+			<strong key="applied"></strong>
+		</div>
+	</div>
+</article>

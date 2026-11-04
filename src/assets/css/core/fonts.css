@@ -1,0 +1,40 @@
+/* Self-hosted font used by the active theme. */
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../fonts/hkgrotesk-light.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../fonts/hkgrotesk-regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../fonts/hkgrotesk-medium.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../fonts/hkgrotesk-semibold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	src: url("../../fonts/hkgrotesk-bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}

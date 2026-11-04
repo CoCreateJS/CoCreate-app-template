@@ -1,0 +1,66 @@
+<article class="card app-card">
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon">
+						<i src="/assets/svg/remix/money-dollar-circle-line.svg" aria-hidden="true"></i>
+					</span>
+					<img
+						class="app-custom-image"
+						key="avatar[0].src"
+						alt=""
+						hidden
+						onload="this.hidden = false"
+						onerror="this.hidden = true" />
+				</span>
+				<h5 class="app-title" key="name"></h5>
+			</div>
+			<span class="text-muted fs-12" key="expenseId"></span>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="status"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+			</div>
+		</div>
+		<p class="app-description" key="description"></p>
+		<div class="d-flex flex-wrap gap-3">
+			<div>
+				<span class="text-muted fs-12 d-block">Amount</span>
+				<strong>
+					<span key="currency"></span>
+					<span key="amount"></span>
+				</strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Tax</span>
+				<strong>
+					<span key="currency"></span>
+					<span key="tax"></span>
+				</strong>
+			</div>
+			<div>
+				<span class="text-muted fs-12 d-block">Category</span>
+				<strong key="category"></strong>
+			</div>
+		</div>
+		<div class="d-flex flex-column gap-2 text-muted fs-12">
+			<span>
+				<i src="/assets/svg/remix/store-2-line.svg" class="me-2"></i>
+				<span key="vendor"></span>
+			</span>
+			<span><i src="/assets/svg/remix/user-line.svg" class="me-2"></i>Paid by: <span key="paid_by"></span></span>
+			<span>
+				<i src="/assets/svg/remix/briefcase-line.svg" class="me-2"></i>
+				<span key="project"></span>
+			</span>
+		</div>
+		<div class="d-flex justify-content-between pt-2 border-top border-top-dashed text-muted fs-12">
+			<span>Expense: <span key="date"></span></span>
+			<span>Due: <span key="due_date"></span></span>
+		</div>
+	</div>
+</article>

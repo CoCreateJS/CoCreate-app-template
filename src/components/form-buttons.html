@@ -1,0 +1,31 @@
+<div class="hstack gap-2 justify-content-end">
+	<style>
+		.offcanvas-app-content:has(#offcanvas-app-view[src*="/app.html"]) > .card-footer,
+		.offcanvas-app-content:has(#offcanvas-app-view[src*="/index.html"]) > .card-footer {
+			display: none;
+		}
+	</style>
+
+	<button
+		type="button"
+		class="btn btn-light"
+		title="Cancel"
+		aria-label="Cancel form"
+		aria-controls="offcanvas-app"
+		aria-expanded="true"
+		aria-close>
+		Cancel
+	</button>
+	<button
+		class="btn btn-success btn-spinner"
+		id="save-btn"
+		aria-label="Save form"
+		actions="validate, disabled, save, timeout(2000), disabled">
+		<span
+			class="spinner-border spinner-border-sm" hidden
+			role="status"
+			aria-hidden="true">
+		</span>
+		<span class="button-text">Save</span>
+	</button>
+</div>

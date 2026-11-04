@@ -1,0 +1,38 @@
+<div
+	class="ai-shell"
+	state-id="aiChat"
+	conversation-id=""
+	data-ai-chat>
+	<link
+		rel="stylesheet"
+		href="/apps/ai/index.css" />
+
+	<div
+		value-type="outerHTML"
+		src="/apps/ai/components/aside.html"></div>
+
+	<main class="ai-main">
+		<div
+			value-type="outerHTML"
+			src="/apps/ai/components/header.html"></div>
+
+		<section
+			class="ai-message-scroll"
+			scrollbar>
+			<div class="ai-message-viewport">
+				<div
+					value-type="outerHTML"
+					src="/apps/ai/components/messages.html"></div>
+				<div
+					value-type="outerHTML"
+					src="/apps/ai/components/message-stream.html"></div>
+				<div
+					value-type="outerHTML"
+					src="/apps/ai/components/message-queue.html"></div>
+			</div>
+		</section>
+		<div
+			value-type="outerHTML"
+			src="/apps/ai/components/message-composer.html"></div>
+	</main>
+</div>

@@ -1,0 +1,41 @@
+<div array="contacts" object render-query="[tempalte]">
+	<div template class="d-flex align-items-center">
+		<div class="avatar-sm rounded-circle position-relative overflow-hidden">
+			<div
+				class="avatar-title bg-secondary-subtle text-secondary material-shadow">
+				<span class="avatar-initial">
+					{{object.first_name[0]}}
+				</span>
+				<span class="avatar-initial">
+					{{object.last_name[0]}}
+				</span>
+				<img
+					class="position-absolute object-fit-cover"
+					src="{{avatar[0].src}}"
+					alt="Header Avatar"
+					width="100%"
+					height="100%" />
+			</div>
+		</div>
+		<span class="text-start ms-xl-2">
+			<span class="ms-1 fw-medium user-name-text">
+				<span>{{object.first_name}}</span>
+				<span>{{object.last_name}}</span>
+			</span>
+			<span class="ms-1 fs-12 user-name-sub-text">{{object.email}}</span>
+		</span>
+	</div>
+</div>
+
+<!-- <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+	<div class="d-flex">
+		<img
+			src="/assets/images/users/avatar-2.jpg"
+			class="me-3 rounded-circle avatar-xs"
+			alt="user-pic" />
+		<div class="flex-grow-1">
+			<h6 class="m-0">Angela Bernier</h6>
+			<span class="fs-11 mb-0 text-muted">Manager</span>
+		</div>
+	</div>
+</a> -->

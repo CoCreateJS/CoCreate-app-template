@@ -1,0 +1,61 @@
+<section
+	class="d-flex flex-column gap-3"
+	array="apis"
+	object="{{object._id}}"
+	render-type="object"
+	render-query="[template='api-custom-field']">
+	<div
+		class="apis-credential"
+		render="object"
+		template="api-custom-field"
+		render-as="field"
+		render-exclude="_id, avatar, name, icon, provider, type, headers, url, description, enabled, created, updated, deleted, permissions, organization_id, pricing, $storage, $database, $array">
+		<label
+			class="text-muted d-block mb-1"
+			for="api-custom-{{field.key}}"
+			>{{field.key}}</label
+		>
+		<div class="apis-credential-field position-relative">
+			<textarea
+				id="api-custom-{{field.key}}"
+				data-api-secret
+				required
+				type="password"
+				key="{{field.key}}"
+				class="form-control font-monospace"
+				aria-label="{{field.key}}"
+				placeholder="Enter {{field.key}}"
+				height="auto"
+				rows="1"
+				spellcheck="false"
+				autocomplete="off"
+				value-evaluate="false"
+				get-value-decode="atob"></textarea>
+			<button
+				type="button"
+				class="apis-credential-icon apis-credential-reveal"
+				click-query="$parent textarea"
+				click.type="text, password"
+				click.get-value-decode=",atob"
+				aria-label="Toggle {{field.key}} visibility"
+				aria-controls="api-custom-{{field.key}}">
+				<i
+					src="/assets/svg/remix/eye-line.svg"
+					click.src="/assets/svg/remix/eye-off-line.svg, /assets/svg/remix/eye-line.svg"
+					aria-hidden="true"></i>
+			</button>
+			<button
+				type="button"
+				class="apis-credential-icon apis-credential-copy"
+				clipboard
+				clipboard-query="$parent textarea"
+				aria-label="Copy {{field.key}}"
+				title="Copy {{field.key}}">
+				<i
+					src="/assets/svg/remix/file-copy-line.svg"
+					aria-hidden="true"></i>
+				<i src="/assets/svg/remix/check-line.svg" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+</section>

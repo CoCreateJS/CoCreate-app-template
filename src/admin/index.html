@@ -1,0 +1,239 @@
+<!doctype html>
+<html
+	state-id="theme, sidebar-size"
+	lang="en"
+	data-layout="vertical"
+	data-topbar-color="defualt"
+	data-sidebar-color="dark"
+	data-sidebar-size="sm-hover"
+	data-sidebar-image="none"
+	data-preloader="disable"
+	data-theme="default"
+	data-theme-colors="default"
+	data-breadcrumbs="off"
+	color-scheme=""
+	session>
+	<head>
+		<meta charset="utf-8" />
+		<title>CoCreate - Regenerative Health Catalog</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Regenerative Health & Longevity product catalog for discover, optimize, and regenerate care pathways." />
+		<meta
+			name="color-scheme"
+			content="light dark" />
+		<meta
+			name="theme-color"
+			content="#405189"
+			media="(prefers-color-scheme: light)" />
+		<meta
+			name="theme-color"
+			content="#292e32"
+			media="(prefers-color-scheme: dark)" />
+
+		<meta
+			content="CoCreate"
+			name="author" />
+
+		<!-- Favicon -->
+		<link
+			rel="shortcut icon"
+			href="/assets/images/icons/favicon.ico" />
+
+		<!-- Plugins -->
+		<link plugins />
+
+		<!-- App -->
+		<link
+			href="/assets/css/index.css"
+			rel="stylesheet"
+			type="text/css" />
+
+		<!-- Manifest -->
+		<link
+			rel="manifest"
+			href="/manifest.webmanifest" />
+	</head>
+
+	<body
+		id="layout-wrapper"
+		class="height:100dvh overflow-hidden">
+		<a
+			href="/auth/"
+			session="false"
+			hidden></a>
+		<a
+			state-to="authRedirect"
+			state.href="/admin/"
+			onload
+			onload.click
+			onload-on="stateLoaded"
+			hidden></a>
+
+		<!-- Header Start -->
+		<header
+			id="page-topbar"
+			src="/components/workspace-header.html"
+			scroll="topbar-shadow"
+			scroll-attribute="class"
+			scroll-top="50"></header>
+		<!-- Header End -->
+
+		<!-- Menu Start -->
+		<menu
+			class="app-menu navbar-menu"
+			src="/admin/components/menu.html"></menu>
+		<!-- Menu End -->
+
+		<!-- Main Content Start-->
+		<main class="main-content height:100dvh overflow-hidden">
+			<!-- Page Content Start -->
+			<div
+				class="page-content d-flex flex-grow-1 flex-wrap h-100 overflow-hidden">
+				<div
+					class="admin-view-layout d-flex flex-grow-1 min-height:0 min-width:0">
+					<aside
+						id="create-panel"
+						class="create-panel"
+						aria-label="Create item"
+						aria-hidden="true"
+						src="/components/create-panel.html"></aside>
+
+					<aside
+						id="context-sidebar"
+						class="context-sidebar"
+						aria-label="Filters"
+						aria-hidden="true"
+						state-id="context-sidebar"
+						state.aria-hidden>
+						<div
+							class="context-sidebar-content"
+							src="/components/filters.html"></div>
+					</aside>
+
+					<div
+						class="admin-main-view flex-grow-1 min-height:0 min-width:200px width:300px"
+						scrollbar>
+						<div
+							id="main-view"
+							class="d-flex flex-column min-height:100% min-width:200px"
+							state-id="adminView"
+							src="">
+							<div
+								onload-query="previous"
+								onload.src="/apps/ai/index.html"
+								onload-set-timeout="3000"></div>
+						</div>
+					</div>
+					<div
+						id="offcanvas-app"
+						state-id="offcanvas-app, offcanvas-app-dock"
+						docked="true"
+						resizable
+						role="dialog"
+						class="app-panel offcanvas offcanvas-end min-height:0 overflow-hidden"
+						tabindex="-1"
+						aria-labelledby="offcanvas-app-label"
+						aria-close-on="button"
+						aria-hidden="true"
+						state.aria-hidden>
+						<div
+							class="offcanvas-app-content d-flex flex-column flex-grow-1 min-height:0 h-100 overflow-hidden">
+							<div
+								class="offcanvas-app-scroll flex-grow-1 min-height:0 height:0 overflow:auto">
+								<div
+									id="offcanvas-app-view"
+									state-id="offcanvas-app-view"
+									src=""></div>
+							</div>
+						</div>
+						<div resize="left"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Page Content End -->
+		</main>
+		<!-- Main Content End -->
+
+		<!-- AI Chat Start -->
+		<aside
+			id="ai-chat-panel"
+			class="ai-chat-panel"
+			aria-hidden="true"
+			state-id="ai-chat-panel"
+			state.aria-hidden
+			aria-label="CoCreate AI"
+			resizable
+			resize
+			resize-query="$document #page-topbar, $document .page-content, $document #offcanvas-app"
+			resize.style="margin-right:$width">
+			<div
+				class="ai-chat-panel-content"
+				state-id="ai-chat-panel-content"
+				src=""></div>
+			<div resize="left"></div>
+		</aside>
+		<!-- AI Chat End -->
+
+		<!-- Preloader Start -->
+		<div id="preloader">
+			<div id="status">
+				<div
+					class="spinner-border text-primary avatar-sm"
+					role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+		</div>
+		<!-- Preloader End -->
+
+		<!-- Media Item Start -->
+		<div src="/components/media-picker/index.html"></div>
+		<!-- Media Item End -->
+
+		<!-- Remove Item Start -->
+		<div src="/components/remove-item.html"></div>
+		<!-- Remove Item End -->
+
+		<!-- Remove Item Start -->
+		<div src="/components/members.html"></div>
+		<!-- Remove Item End -->
+
+		<!-- Notification Start -->
+		<div
+			class="position:fixed!important bottom:15px right:15px"
+			aria-live="polite"
+			role="status"
+			aria-atomic="true">
+			<div
+				template="notification"
+				class="card position:relative margin-top:10px padding:20px {{status}}">
+				<span class="{{type}} font-weight:400">{{message}}</span>
+				<a
+					click-query="$parent"
+					click.$remove=""
+					class="position:absolute top:4px right:4px"
+					aria-label="Dismiss notification">
+					<i
+						src="/assets/svg/times.svg"
+						aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+		<!-- Notification End -->
+
+		<!-- Vertical Overlay Start -->
+		<div
+			class="vertical-overlay"
+			toggle.class="vertical-sidebar-enable,"
+			toggle-query="$document body"></div>
+		<!-- Vertical Overlay End -->
+
+		<!-- JAVASCRIPT -->
+		<script src="/dist/CoCreate.js"></script>
+	</body>
+</html>

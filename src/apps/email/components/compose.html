@@ -1,0 +1,127 @@
+<div
+	class="dialog fade"
+	id="composemodal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="composemodalTitle"
+	aria-modal="true">
+	<div class="card card-lg" role="document" aria-close-on="outside">
+		<div class="card-header d-flex justify-content-between p-3 bg-light">
+			<h5 class="card-title mb-0" id="composemodalTitle">New Message</h5>
+			<button
+				type="button"
+				class="btn-close"
+				aria-label="Close"
+				aria-controls="composemodal"
+				aria-expanded="true" aria-close></button>
+		</div>
+		<div class="card-body">
+			<div src="/apps/email/components/contact-options.html"></div>
+			<div>
+				<div class="mb-3 position-relative">
+					<div
+						src="/apps/email/components/recipient-select.html"
+						input-query="$this [key]"
+						input.key="to"
+						input.id="email-to"
+						input.class="email-compose-input"
+						input.value="support@themesbrand.com"
+						onload-query="$this [key]"
+						onload.key="to"
+						onload.id="email-to"
+						onload.class="email-compose-input"
+						onload.value="support@themesbrand.com"></div>
+					<div class="position-absolute top-0 end-0">
+						<div class="d-flex">
+							<button
+								class="btn btn-link text-reset fw-semibold px-2"
+								type="button"
+								aria-controls="CcRecipientsCollapse"
+								aria-expanded="false"
+								aria-label="Show Cc recipients"
+								role="button">
+								Cc
+							</button>
+							<button
+								class="btn btn-link text-reset fw-semibold px-2"
+								type="button"
+								aria-controls="BccRecipientsCollapse"
+								aria-expanded="false"
+								aria-label="Show Bcc recipients"
+								role="button">
+								Bcc
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="collapse" id="CcRecipientsCollapse">
+					<div class="mb-3">
+						<label for="email-cc" class="form-label">Cc:</label>
+						<div
+							src="/apps/email/components/recipient-select.html"
+							input-query="$this [key]"
+							input.key="cc"
+							input.id="email-cc"
+							onload-query="$this [key]"
+							onload.key="cc"
+							onload.id="email-cc"></div>
+					</div>
+				</div>
+				<div class="collapse" id="BccRecipientsCollapse">
+					<div class="mb-3">
+						<label for="email-bcc" class="form-label">Bcc:</label>
+						<div
+							src="/apps/email/components/recipient-select.html"
+							input-query="$this [key]"
+							input.key="bcc"
+							input.id="email-bcc"
+							onload-query="$this [key]"
+							onload.key="bcc"
+							onload.id="email-bcc"></div>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Subject" />
+				</div>
+				<div id="email-editor"></div>
+			</div>
+		</div>
+		<div class="card-footer d-flex justify-content-end">
+			<button
+				type="button"
+				class="btn btn-ghost-danger"
+				aria-controls="composemodal"
+				aria-expanded="false">
+				Discard
+			</button>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-success">Send</button>
+				<button
+					type="button"
+					class="btn btn-success dropdown-toggle dropdown-toggle-split"
+					aria-haspopup="menu"
+					aria-expanded="false"
+					aria-controls="composemodal-dropdown-menu">
+					<span class="visually-hidden">Toggle Dropdown</span>
+				</button>
+				<ul
+					class="dropdown-menu dropdown-menu-end"
+					id="composemodal-dropdown-menu"
+					aria-close-on="anywhere"
+					role="menu">
+					<li>
+						<a class="dropdown-item" href="#" role="menuitem"
+							><i src="/assets/svg/remix/timer-line.svg" class="text-muted me-1 align-bottom"></i>
+							Schedule Send</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

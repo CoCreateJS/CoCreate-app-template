@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/components/list/selection.css" />
+<div class="files-render-sections" role="grid" aria-label="Files" aria-multiselectable="true">
+	<div
+		id="files-folders"
+		state-id="files-folders"
+		data-files-results
+		data-files-kind="folders"
+		role="rowgroup"
+		class="list-view files-render-grid gap-3"
+		array=""
+		object
+		hidden
+		filter-query-key="content-type"
+		filter-query-value="text/directory"
+		filter-sort-key="name"
+		filter-sort-direction="asc"
+		filter-limit="20"
+		render-query="template"
+		src="/apps/files/templates/card.html"></div>
+	<div
+		id="files-list"
+		state-id="files-list"
+		data-files-results
+		data-files-kind="files"
+		role="rowgroup"
+		class="list-view files-render-grid gap-3"
+		array="files"
+		object
+		filter-query-key="content-type.$ne"
+		filter-query-value="text/directory"
+		filter-sort-key="name"
+		filter-sort-direction="asc"
+		filter-limit="20"
+		render-query="template"
+		src="/apps/files/templates/card.html"></div>
+	<div style="height: 20px" filter-limit="10" filter-on="scroll" filter-query="$previous" aria-hidden="true"></div>
+</div>

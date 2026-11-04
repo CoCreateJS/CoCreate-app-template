@@ -1,0 +1,92 @@
+<div class="context-filter d-flex h-100 min-height:0 flex-column">
+	<div class="context-sidebar-header">
+		<h5 class="context-sidebar-title mb-0">
+			<span
+				state-id="app"
+				array="apps"
+				object=""
+				key="singularName"></span>
+			<span>Filters</span>
+		</h5>
+		<button
+			type="button"
+			class="btn-close text-reset"
+			aria-controls="context-sidebar"
+			aria-expanded="true"
+			aria-label="Close"
+			aria-close></button>
+	</div>
+	<form
+		action=""
+		class="d-flex flex-column flex-grow-1 min-height:0">
+		<div
+			class="context-sidebar-body flex-grow-1 min-height:0"
+			scrollbar>
+			<!-- Render filter fields dynamically from object.fields[] -->
+			<div
+				state-id="app"
+				render-query="[template='filter']"
+				array="apps"
+				object=""
+				key="fields"
+				filter-limit>
+				<div
+					class="mb-3"
+					template="filter"
+					render-as="fields"
+					value-type="html">
+					<label
+						class="form-label text-muted text-uppercase fw-semibold mb-1"
+						for="{{fields.key}}-filter">
+						{{fields.label}}
+					</label>
+					<!-- <div src="components/templates/{{fields.tag}}.html"></div> -->
+					{{fields.filterTemplate}}
+				</div>
+			</div>
+			<template
+				observe-target="[template='filter'] [tag='input']:empty"
+				observe-query="$parent [tag='input']:empty"
+				observe-insert-adjacent="afterbegin">
+				<input
+					id="{{fields.key}}-filter"
+					class="{{fields.attributes.class}}"
+					type="{{fields.attributes.type}}"
+					placeholder="Enter {{fields.label}}" />
+			</template>
+			<template
+				observe-target="#context-sidebar [tag='select']:empty"
+				observe-query="$parent [tag='select']:empty"
+				observe-insert-adjacent="afterbegin">
+				<select
+					id="{{fields.key}}-filter"
+					class="{{fields.attributes.class}}"
+					multiple
+					render="fields.options">
+					<option value="">Select {{fields.label}}</option>
+					<span
+						render-query="[template='option']"
+						array="apps"
+						object="686c630106fe282e338c1056"
+						key="fields"
+						filter-key="{{fields.key}}">
+					</span>
+				</select>
+			</template>
+			<template
+				observe-target="#context-sidebar [tag='div']:empty"
+				observe-query="$parent [tag='div']:empty"
+				observe-insert-adjacent="afterbegin">
+				<div
+					class="{{fields.attributes.class}}"
+					render>
+					<!-- You can add dynamic content for div tagname here if needed -->
+				</div>
+			</template>
+		</div>
+		<!--end offcanvas-body-->
+		<div class="context-sidebar-footer border-top text-center hstack gap-2">
+			<button class="btn btn-light w-100">Clear Filter</button>
+		</div>
+	</form>
+</div>

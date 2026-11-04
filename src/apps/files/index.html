@@ -1,0 +1,124 @@
+<link
+	rel="stylesheet"
+	href="/apps/files/index.css" />
+
+<div class="files-app">
+	<!-- File listings request metadata; file contents are loaded by the details view. -->
+	<input
+		type="hidden"
+		filter-key="_id"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="name"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="content-type"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="size"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="path"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="pathname"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="description"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="updated.on"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		filter-key="deleted.on"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+
+	<input
+		type="hidden"
+		filter-key="starred"
+		filter-value="1"
+		filter-query="$document #list-view [data-files-results][]" />
+
+	<input
+		type="hidden"
+		state-id="files-path"
+		value=""
+		filter-query-key="path"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		state-id="files-owner"
+		value=""
+		filter-query-key="owner"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		state-id="files-starred"
+		value=""
+		filter-query-key="starred"
+		filter-query="$document #list-view [data-files-results][]" />
+	<input
+		type="hidden"
+		state-id="files-deletion"
+		value='[{"deleted":{"$exists":false}},{"deleted":false}]'
+		value-type="json"
+		value-evaluate="false"
+		set-value-type="string"
+		filter-query-key="$or"
+		filter-query="$document #list-view [data-files-results][]" />
+
+	<div class="chat-wrapper d-lg-flex">
+		<div
+			id="files-sidebar"
+			state-id="files-sidebar"
+			state.aria-hidden
+			aria-close-on="button"
+			class="file-manager-sidebar minimal-border"
+			aria-hidden="true"
+			src="/apps/files/components/sidenav.html"></div>
+		<button
+			type="button"
+			tabindex="-1"
+			class="file-sidebar-backdrop"
+			aria-label="Close files menu"
+			aria-controls="files-sidebar"
+			aria-close
+			aria-expanded="false"></button>
+
+		<div
+			class="file-manager-content component-list app-panel minimal-border flex-grow-1">
+			<div
+				class="app-panel-header flex-shrink-0"
+				src="/apps/files/components/header.html"></div>
+			<div
+				class="files-main-body"
+				scrollbar>
+				<div
+					id="list-view"
+					state-id="files-list-view"
+					class="w-100"
+					src="/apps/files/components/grid.html"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div src="/apps/files/components/rename.html"></div>
+<div src="/apps/files/components/delete.html"></div>

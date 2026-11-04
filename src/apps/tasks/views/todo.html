@@ -1,0 +1,352 @@
+<link
+	rel="stylesheet"
+	href="/apps/tasks/index.css" />
+
+<div class="container-fluid">
+	<div class="chat-wrapper d-lg-flex gap-1 mx-n4 mt-n4 p-1">
+		<div class="file-manager-sidebar minimal-border">
+			<div class="p-4 d-flex flex-column h-100">
+				<div class="mb-3">
+					<button
+						class="btn btn-success w-100"
+						aria-controls="createProjectModal"
+						aria-expanded="false"
+						aria-haspopup="dialog">
+						<i
+							src="/assets/svg/remix/add-line.svg"
+							class="align-bottom"></i>
+						Add Project
+					</button>
+				</div>
+
+				<div
+					class="px-4 mx-n4"
+					scrollbar
+					style="height: calc(100vh - 468px)">
+					<ul
+						class="to-do-menu list-unstyled"
+						id="projectlist-data">
+						<li>
+							<a
+								href="#CoCreateAdmin"
+								class="nav-link fs-13 active"
+								aria-controls="CoCreateAdmin"
+								>CoCreate Admin & Dashboard</a
+							>
+							<div
+								class="collapse show"
+								id="CoCreateAdmin">
+								<ul
+									class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-danger"></i>
+											v1.4.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-secondary"></i>
+											v1.5.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-info"></i>
+											v1.6.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-primary"></i>
+											v1.7.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-warning"></i>
+											v1.8.0</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a
+								href="#projectManagement"
+								class="nav-link fs-13"
+								aria-controls="projectManagement"
+								>Project Management</a
+							>
+							<div
+								class="collapse"
+								id="projectManagement">
+								<ul
+									class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-danger"></i>
+											v2.1.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-secondary"></i>
+											v2.2.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-info"></i>
+											v2.3.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-primary"></i>
+											v2.4.0</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a
+								href="#skoteAdmin"
+								class="nav-link fs-13"
+								aria-controls="skoteAdmin"
+								>Skote Admin & Dashboard</a
+							>
+							<div
+								class="collapse"
+								id="skoteAdmin">
+								<ul
+									class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-danger"></i>
+											v4.1.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-secondary"></i>
+											v4.2.0</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a
+								href="#ecommerceProject"
+								class="nav-link fs-13"
+								aria-controls="ecommerceProject"
+								>Doot - Chat App Template</a
+							>
+							<div
+								class="collapse"
+								id="ecommerceProject">
+								<ul
+									class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-danger"></i>
+											v1.0.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-secondary"></i>
+											v1.1.0</a
+										>
+									</li>
+									<li>
+										<a href="#!"
+											><i
+												src="/assets/svg/remix/stop-mini-fill.svg"
+												class="align-middle fs-15 text-info"></i>
+											v1.2.0</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mt-auto text-center">
+					<img
+						src="/assets/images/task.png"
+						alt="Task"
+						class="img-fluid" />
+				</div>
+			</div>
+		</div>
+		<!--end side content-->
+		<div class="file-manager-content minimal-border w-100 p-4 pb-0">
+			<div class="d-flex flex-wrap mb-4">
+				<div class="order-1 d-block d-lg-none flex-shrink-0">
+					<button
+						type="button"
+						class="btn btn-soft-success btn-icon btn-sm fs-16 file-menu-btn">
+						<i
+							src="/assets/svg/remix/menu-2-fill.svg"
+							class="align-bottom"></i>
+					</button>
+				</div>
+				<div
+					class="order-3 order-sm-2 mt-3 mt-sm-0 flex-grow-1 flex-basis:180px min-width:180px">
+					<h5 class="fw-semibold mb-0">
+						CoCreate Admin & Dashboard
+						<span class="badge bg-primary align-bottom ms-2"
+							>v2.0.0</span
+						>
+					</h5>
+				</div>
+
+				<div class="order-2 order-sm-3 ms-auto flex-shrink-0">
+					<div class="hstack gap-2">
+						<div
+							class="btn-group"
+							role="group"
+							aria-label="Basic example">
+							<button
+								class="btn btn-icon fw-semibold btn-soft-danger material-shadow-none">
+								<i
+									src="/assets/svg/remix/arrow-go-back-line.svg"></i>
+							</button>
+							<button
+								class="btn btn-icon fw-semibold btn-soft-success material-shadow-none">
+								<i
+									src="/assets/svg/remix/arrow-go-forward-line.svg"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-3 bg-light rounded mb-4">
+				<div class="d-flex flex-wrap gap-2">
+					<div class="flex-shrink-0">
+						<select
+							class="form-control"
+							name="task-sort-filter"
+							id="task-sort-filter">
+							<option value="">Sort</option>
+							<option value="By ID">By ID</option>
+							<option value="By Name">By Name</option>
+						</select>
+					</div>
+					<div class="flex-shrink-0">
+						<select
+							class="form-control"
+							name="task-status-filter"
+							id="task-status-filter">
+							<option value="">All Tasks</option>
+							<option value="Completed">Completed</option>
+							<option value="Inprogress">Inprogress</option>
+							<option value="Pending">Pending</option>
+							<option value="New">New</option>
+						</select>
+					</div>
+					<div class="flex-grow-1 flex-basis:180px min-width:180px">
+						<div class="search-box">
+							<input
+								type="text"
+								id="searchTaskList"
+								class="form-control search"
+								placeholder="Search task name" />
+							<i
+								src="/assets/svg/remix/search-line.svg"
+								class="search-icon"></i>
+						</div>
+					</div>
+					<div class="flex-shrink-0">
+						<button
+							class="btn btn-primary createTask"
+							type="button"
+							aria-controls="createTask"
+							aria-expanded="false"
+							aria-haspopup="dialog">
+							<i
+								src="/assets/svg/remix/add-fill.svg"
+								class="align-bottom"></i>
+							Add Tasks
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="todo-content position-relative px-4 mx-n4"
+				id="todo-content">
+				<div id="elmLoader">
+					<div
+						class="spinner-border text-primary avatar-sm"
+						role="status">
+						<span class="visually-hidden">Loading...</span>
+					</div>
+				</div>
+				<div
+					class="todo-task"
+					id="todo-task">
+					<div class="table-responsive">
+						<table
+							class="table align-middle position-relative table-nowrap">
+							<thead class="table-active">
+								<tr>
+									<th scope="col">Task Name</th>
+									<th scope="col">Assigned</th>
+									<th scope="col">Due Date</th>
+									<th scope="col">Status</th>
+									<th scope="col">Priority</th>
+									<th scope="col">Action</th>
+								</tr>
+							</thead>
+
+							<tbody id="task-list"></tbody>
+						</table>
+					</div>
+				</div>
+				<div
+					class="py-4 mt-4 text-center"
+					id="noresult"
+					style="display: none">
+					<lord-icon
+						src="https://cdn.lordicon.com/msoeawqm.json"
+						trigger="loop"
+						colors="primary:#405189,secondary:#0ab39c"
+						style="width: 72px; height: 72px"></lord-icon>
+					<h5 class="mt-4">Sorry! No Result Found</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- container-fluid -->

@@ -1,0 +1,5 @@
+.apps-details-fields { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.apps-details-fields > div { flex: 1 1 12rem; min-width: 0; }
+.apps-details-fields > .w-100 { flex-basis: 100%; }
+.apps-details-fields dt { margin-bottom: .5rem; color: var(--coc-secondary-color); font-size: .75rem; font-weight: 500; }
+.apps-details-fields dd { margin: 0; overflow-wrap: anywhere; }

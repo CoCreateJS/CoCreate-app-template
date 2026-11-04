@@ -1,0 +1,48 @@
+<article class="card app-card">
+	<div class="app-card-body">
+		<div class="app-heading">
+			<div class="app-identity">
+				<span class="app-image">
+					<span class="app-icon">
+						<i src="/assets/svg/remix/apps-2-line.svg" key="icon" aria-hidden="true" input.src="$value"></i>
+					</span>
+					<img
+						class="app-custom-image"
+						key="avatar[0].src"
+						alt=""
+						hidden
+						onload="this.hidden = false"
+						onerror="this.hidden = true" />
+				</span>
+				<h5 class="app-title" key="name"></h5>
+			</div>
+			<div class="app-badges">
+				<span
+					class="badge app-badge"
+					key="category"
+					data-value
+					input.data-value="$value"
+					input.value="$value"></span>
+				<span
+					class="badge app-badge"
+					role="status"
+					aria-label="Enabled status"
+					key="enabled"
+					data-value
+					input.data-value="$value"
+					input.value="$(`$value` === 'true' ? 'Enabled' : 'Disabled')"></span>
+			</div>
+		</div>
+		<p class="app-description" key="description"></p>
+		<div class="d-flex flex-wrap gap-3">
+			<div>
+				<span class="text-muted fs-12 d-block">Array</span>
+				<code key="array"></code>
+			</div>
+		</div>
+		<div class="text-muted fs-12 pt-2 border-top border-top-dashed">
+			<i src="/assets/svg/remix/folder-line.svg" class="me-1"></i>
+			<span key="path"></span>
+		</div>
+	</div>
+</article>

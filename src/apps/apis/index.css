@@ -1,0 +1,92 @@
+#apis-aside > header {
+	flex-shrink: 0;
+}
+
+.apis-form-field {
+	flex: 1 1 12rem;
+	min-width: 0;
+}
+
+.apis-image-editor {
+	width: 100px;
+	height: 100px;
+}
+
+.apis-image-editor .avatar-xl {
+	--avatar-size: 100px;
+}
+
+.apis-image-editor div.avatar-xl {
+	margin-bottom: 0 !important;
+	background: transparent;
+}
+
+.apis-image-editor img.avatar-xl {
+	object-fit: contain !important;
+	background: transparent;
+}
+
+.apis-image-editor img[src="/assets/images/user.jpg"] {
+	visibility: hidden;
+}
+
+.apis-credential :is(input, textarea):not([hidden]):placeholder-shown ~ button {
+	display: none;
+}
+
+.apis-credential-field > input {
+	padding-right: 5rem;
+	background-color: var(--coc-body-bg);
+}
+
+.apis-credential-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.25rem;
+	border: 0;
+	background: transparent;
+	color: var(--coc-secondary-color);
+	font-size: 1.25rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.apis-credential-reveal {
+	right: 2.5rem;
+}
+
+.apis-credential-copy {
+	right: 0.5rem;
+}
+
+.apis-status .apis-status-enabled,
+.apis-status:has(input:checked) .apis-status-disabled {
+	display: none;
+}
+
+.apis-status:has(input:checked) .apis-status-enabled {
+	display: inline-block;
+}
+
+.apis-credential textarea[type="password"] {
+    -webkit-text-security: disc;
+}
+
+.apis-credential textarea[type="text"] {
+    -webkit-text-security: none;
+}
+
+.apis-credential-field>textarea {
+    padding-right: 4.5rem;
+    background-color: var(--coc-body-bg);
+    resize: none;
+}
+
+.apis-credential-field:has(textarea:not([hidden]))>button {
+    top: 0.3rem;
+    transform: none;
+}

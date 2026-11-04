@@ -1,0 +1,38 @@
+<div class="width:100%">
+	<label
+		for="tasks-progress"
+		class="form-label"
+		>Add Team Member</label
+	>
+	<div
+		scrollbar
+		style="height: 95px">
+		<ul
+			class="list-unstyled vstack gap-2 mb-0"
+			render="members"
+			render-as="member">
+			<li
+				template
+				object="{{member.id}}">
+				<div class="form-check d-flex align-items-center">
+					<input
+						class="form-check-input me-3"
+						type="checkbox"
+						value=""
+						id="{{member.id}}" />
+					<label
+						class="form-check-label d-flex align-items-center"
+						for="{{member.id}}">
+						<span class="flex-shrink-0">
+							<img
+								src="{{member.avatar}}"
+								alt=""
+								class="avatar-xxs rounded-circle" />
+						</span>
+						<span class="flex-grow-1 ms-2"> {{member.name}} </span>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

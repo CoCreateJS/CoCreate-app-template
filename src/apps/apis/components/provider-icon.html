@@ -1,0 +1,34 @@
+<span
+	class="app-image"
+	aria-hidden="true"
+	object="{{object.api_id}}{{object.cloud}}"
+	key="api_id"
+	value
+	input.object="$value"
+	input-query="[array][]">
+	<input
+		type="hidden"
+		array="apis"
+		object="{{object.api_id}}{{object.cloud}}"
+		key="alt"
+		input-query="$next"
+		input.alt="$value" />
+	<img
+		form-attributes="false"
+		array="apis"
+		key="icon"
+		object="{{object.api_id}}{{object.cloud}}"
+		alt=""
+		onload="this.hidden = false"
+		onerror="this.hidden = true" />
+	<img
+		class="app-custom-image"
+		form-attributes="false"
+		array="apis"
+		key="avatar[0].src"
+		object="{{object.api_id}}{{object.cloud}}"
+		alt=""
+		hidden
+		onload="this.hidden = false"
+		onerror="this.hidden = true" />
+</span>

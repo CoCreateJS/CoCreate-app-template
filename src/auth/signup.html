@@ -1,0 +1,304 @@
+<div class="card-body p-4">
+	<form
+		id="signup-form"
+		class="signup-form"
+		array="contacts"
+		object=""
+		read="false"
+		realtime="false"
+		workflow="unique"
+		data-signup-step="account"
+		aria-label="Create your account and organization">
+		<style>
+			.signup-form[data-signup-step="account"] .signup-organization,
+			.signup-form:not([data-signup-step="account"]) .signup-account,
+			.signup-form:not([data-signup-step="complete"]) .signup-complete,
+			.signup-form[data-signup-step="complete"]
+				.signup-organization-fields,
+			.signup-form .button-busy {
+				display: none;
+			}
+			.signup-form button[disabled] .button-text {
+				display: none;
+			}
+			.signup-form button[disabled] .button-busy {
+				display: inline;
+			}
+			#email[unique="false"] ~ #signup-email-error {
+				display: block !important;
+			}
+			.input-group:has(#signup-hostname[unique="false"])
+				+ #signup-hostname-error {
+				display: block !important;
+			}
+		</style>
+
+		<section
+			id="signup-account-step"
+			submit-query="#signup-btn"
+			class="signup-account"
+			aria-labelledby="signup-account-title">
+			<div class="text-center mt-2 mb-4">
+				<p class="text-muted small mb-2">Step 1 of 2</p>
+				<h5
+					id="signup-account-title"
+					class="text-primary">
+					Create your account
+				</h5>
+				<p class="text-muted">Start with your details.</p>
+			</div>
+			<div class="mb-3">
+				<label
+					for="name"
+					class="form-label"
+					>Full Name <span class="text-danger">*</span></label
+				>
+				<input
+					type="text"
+					class="form-control"
+					id="name"
+					name="name"
+					key="name"
+					autocomplete="name"
+					input-query="$document .name-field[]"
+					input.value="$value"
+					placeholder="Enter your full name"
+					required
+					aria-required="true"
+					aria-errormessage="signup-name-error" />
+				<span
+					id="signup-name-error"
+					class="text-danger small"
+					hidden></span>
+
+				<input
+					class="name-field"
+					name="first_name"
+					id="first_name"
+					type="hidden"
+					key="first_name"
+					value-match="/^\s*([^\s]+)/" />
+				<input
+					class="name-field"
+					name="last_name"
+					id="last_name"
+					type="hidden"
+					key="last_name"
+					value-match="/\s+([^\s]+)\s*$/" />
+			</div>
+
+			<div class="mb-3">
+				<label
+					for="email"
+					class="form-label"
+					>Email <span class="text-danger">*</span></label
+				>
+				<input
+					type="email"
+					class="form-control"
+					id="email"
+					name="email"
+					autocomplete="email"
+					input="$workflow('unique', $this)"
+					unique-key="email"
+					array="users"
+					object=""
+					key="email"
+					placeholder="Enter email address"
+					required
+					aria-required="true"
+					aria-errormessage="signup-email-error" />
+				<span
+					id="signup-email-error"
+					class="text-danger small"
+					role="alert"
+					hidden
+					>This email is already in use.</span
+				>
+			</div>
+
+			<div class="mb-3">
+				<label
+					for="password"
+					class="form-label"
+					>Password <span class="text-danger">*</span></label
+				>
+				<div class="position-relative">
+					<input
+						type="password"
+						class="form-control pe-5"
+						id="password"
+						name="password"
+						autocomplete="new-password"
+						key="password"
+						placeholder="Enter password"
+						required
+						aria-required="true"
+						aria-errormessage="signup-password-error" />
+					<button
+						type="button"
+						class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none"
+						click-query="$previous"
+						click.type="text, password"
+						aria-label="Toggle password visibility"
+						aria-controls="password">
+						<i src="/assets/svg/remix/eye-fill.svg" class="align-middle"
+							click.src="/assets/svg/remix/eye-off-fill.svg, /assets/svg/remix/eye-fill.svg"
+							aria-hidden="true"></i>
+					</button>
+				</div>
+				<span
+					id="signup-password-error"
+					class="text-danger small"
+					hidden></span>
+			</div>
+
+			<button
+				id="signup-btn"
+				type="button"
+				class="btn btn-success btn-spinner w-100 mt-2"
+				actions="disabled, validate(#signup-account-step), click, focus"
+				click-query="$closest form"
+				click.data-signup-step="organization"
+				focus-query="$document #signup-organization-name"
+				focus.$focus="$undefined">
+				<span
+					class="spinner-border spinner-border-sm" hidden
+					aria-hidden="true"></span>
+				<span class="button-text">Next</span>
+				<span class="button-busy">Checking your details...</span>
+			</button>
+			<p class="mb-0 mt-3 text-center">
+				Already have an account?
+				<a
+					state-to="authView"
+					state.src="./signin.html"
+					class="fw-semibold text-primary text-decoration-underline"
+					>Sign In</a
+				>
+			</p>
+		</section>
+
+		<section
+			id="signup-organization-step"
+			submit-query="#signup-create-btn"
+			class="signup-organization"
+			aria-labelledby="signup-organization-title">
+			<div class="signup-organization-fields">
+				<div class="text-center mt-2 mb-4">
+					<p class="text-muted small mb-2">Step 2 of 2</p>
+					<h5
+						id="signup-organization-title"
+						class="text-primary">
+						Create your organization
+					</h5>
+					<p class="text-muted">
+						Choose a name and an address for your workspace.
+					</p>
+				</div>
+				<div class="mb-3">
+					<label
+						for="signup-organization-name"
+						class="form-label"
+						>Organization name
+						<span class="text-danger">*</span></label
+					>
+					<input
+						id="signup-organization-name"
+						array="organizations"
+						object=""
+						form-attributes="false"
+						name="organization"
+						key="name"
+						class="form-control"
+						autocomplete="organization"
+						required
+						aria-errormessage="signup-organization-name-error" />
+					<span
+						id="signup-organization-name-error"
+						class="text-danger small"
+						hidden></span>
+				</div>
+				<div class="mb-4">
+					<label
+						for="signup-hostname"
+						class="form-label"
+						>Host <span class="text-danger">*</span></label
+					>
+					<div class="input-group">
+						<input
+							id="signup-hostname"
+							array="organizations"
+							object=""
+							form-attributes="false"
+							name="host[0].name"
+							key="host[0].name"
+							unique-key="host.name"
+							class="form-control"
+							placeholder="your-team"
+							autocomplete="off"
+							autocapitalize="none"
+							spellcheck="false"
+							maxlength="63"
+							pattern="[a-z0-9]([a-z0-9\-]{0,61}[a-z0-9])?"
+							value-suffix=".cocreatejs.com"
+							input="$workflow('unique', $this)"
+							required
+							aria-describedby="signup-hostname-suffix signup-hostname-help"
+							aria-errormessage="signup-hostname-error" />
+						<span
+							id="signup-hostname-suffix"
+							class="input-group-text"
+							>.cocreatejs.com</span
+						>
+					</div>
+					<span
+						id="signup-hostname-error"
+						class="text-danger small"
+						role="alert"
+						hidden></span>
+					<p
+						id="signup-hostname-help"
+						class="form-text mb-0">
+						Use lowercase letters, numbers, and hyphens. Start and
+						end with a letter or number.
+					</p>
+				</div>
+				<button
+					id="signup-create-btn"
+					type="button"
+					class="btn btn-success btn-spinner w-100"
+					actions="disabled, validate(#signup-form), signUp, signIn, createOrganization, click, focus"
+					click-query="$closest form"
+					click.data-signup-step="complete"
+					focus-query="$document #signup-complete-title"
+					focus.$focus="$undefined">
+					<span
+						class="spinner-border spinner-border-sm" hidden
+						aria-hidden="true"></span>
+					<span class="button-text"
+						>Create account and organization</span
+					>
+					<span class="button-busy"
+						>Creating your account and organization...</span
+					>
+				</button>
+			</div>
+			<div
+				class="signup-complete text-center py-4"
+				role="status">
+				<i src="/assets/svg/remix/checkbox-circle-line.svg" class="text-success fs-1"
+					aria-hidden="true"></i>
+				<h5
+					id="signup-complete-title"
+					class="text-primary mt-3"
+					tabindex="-1">
+					Your organization is ready
+				</h5>
+				<p class="text-muted mb-0">
+					Your account and organization have been created.
+				</p>
+			</div>
+		</section>
+	</form>
+</div>
